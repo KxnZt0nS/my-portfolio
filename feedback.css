@@ -1,0 +1,105 @@
+:root {
+    --text-color: #dddddd;
+    --secondary-color: #000000;
+    --first-bgcolor: #000000;
+    --second-bgcolor: #080808;
+    --third-bgcolor: #0f0f0f;
+    --first-ncolor: #eeeeee;
+    --second-ncolor: #888888;
+    --third-ncolor: #222222;
+    --fourth-ncolor: #555555;
+    --fifth-ncolor: #aaaaaa;
+    --first-tcolor: #734a05;
+    --second-tcolor: #4d3306;
+    --third-tcolor: #2e2007;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    color: var(--text-color);
+    background-color: var(--secondary-color);
+    font-size: 1em;
+    font-family: 'Poppins', sans-serif;
+}
+
+.fa-x {
+    top: 10px;
+    right: 10px;
+    font-size: 1.25em;
+    color: var(--text-color);
+    position: absolute;
+}
+
+.feedback-container {
+    width: 50%;
+    height: 80vh;
+}
+
+.feedback-container h2 {
+    font-size: 2.5em;
+    text-align: center;
+}
+
+#feedback-fieldset {
+    border: none;
+    width: 50%;
+    margin: 5px auto;
+}
+
+input, textarea, select {
+    width: 100%;
+    display: block;
+    border: none;
+    outline: none;
+    margin: 20px 0;
+    padding: 10px 15px;
+    border-radius: 15px;
+    color: var(--text-color);
+    background: linear-gradient(to right, var(--fourth-ncolor), var(--third-ncolor));
+    font-size: 1em;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 3px 3px var(--fourth-ncolor);
+}
+
+input::placeholder, textarea::placeholder, select::placeholder {
+    color: var(--text-color);
+}
+
+input:focus, textarea:focus, button:focus, select:focus {
+    box-shadow: 1.5px 1.5px var(--third-ncolor);
+    transition: 0.3s;
+    background: linear-gradient(to right, var(--second-ncolor), var(--third-ncolor));
+}
+
+input:active, textarea:active, button:active, select:active {
+    transform: translate(3px, 3px);
+    box-shadow: none;
+    transition: 0.3s;
+}
+
+button {
+    padding: 5px 15px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    border-radius: 15px;
+    color: var(--text-color);
+    background: linear-gradient(to right, var(--fourth-ncolor), var(--third-ncolor));
+    font-size: 1em;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 3px 3px var(--fourth-ncolor);
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Give me feedback</title>
+        <script src="https://kit.fontawesome.com/fd0d0cf834.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="feedback.css">
+    </head>
+
+    <body>
+        <a href="index.html"><i class="fa-solid fa-x"></i></a>
+
+        <div class="feedback-container column" id="feedback">
+            <h2>Give Me Feedback</h2>
+
+            <form action="https://formspree.io/f/mwpqjjpy" method="post">
+                <fieldset id="feedback-fieldset">
+                    <input type="text" id="feedback-name" name="feedback-name" placeholder="Name" required>
+                                
+                    <select id="feedback-context" name="feedback-context" required>
+                        <option value="">Rate the context of my website</option>
+                        <option value="Beginner">Beginner</option>
+                        <option value="Intermediate">Intermediate</option>
+                        <option value="Advanced">Advanced</option>
+                    </select>
+
+                    <select id="feedback-design" name="feedback-design" required>
+                        <option value="">Rate the design of my website</option>
+                        <option value="Beginner">Beginner</option>
+                        <option value="Intermediate">Intermediate</option>
+                        <option value="Advanced">Advanced</option>
+                    </select>
+
+                    <select id="feedback-overall" name="feedback-overall" required>
+                        <option value="">Rate the overall of my website</option>
+                        <option value="Beginner">Beginner</option>
+                        <option value="Intermediate">Intermediate</option>
+                        <option value="Advanced">Advanced</option>
+                    </select>
+                                
+                    <textarea id="feedback-comment" name="feedback-comment" rows="5" cols="30" placeholder="Make a comment(not required)..."></textarea>
+
+                    <button type="submit" id="feedback-btn">Send Feedback</button>
+                </fieldset>
+            </form>
+        </div>
+
+        <script src="feedback.js"></script>    
+    </body>
+</html>
