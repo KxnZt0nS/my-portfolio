@@ -10,6 +10,20 @@ const q4 = document.getElementById("q-4");
 const a4 = document.getElementById("a-4");
 const q5 = document.getElementById("q-5");
 const a5 = document.getElementById("a-5");
+const q6 = document.getElementById("q-6");
+const a6 = document.getElementById("a-6");
+
+const firstSet = document.getElementById("first-set");
+const secondSet = document.getElementById("second-set");
+const thirdSet = document.getElementById("third-set");
+
+const htmlDetails = document.getElementById("html-details");
+const cssDetails = document.getElementById("css-details");
+const jsDetails = document.getElementById("js-details");
+const reactDetails = document.getElementById("react-details");
+const cppDetails = document.getElementById("cpp-details");
+const pythonDetails = document.getElementById("python-details");
+const skillDetails = document.querySelectorAll(".skill-details");
 
 const form = document.getElementById("form");
 const result = document.getElementById("result");
@@ -60,6 +74,101 @@ q5.addEventListener("click", () => {
     q5.classList.toggle("active");
 });
 
+q6.addEventListener("click", () => {
+    a6.classList.toggle("open");
+    q6.classList.toggle("active");
+});
+
+function openHtmlDetails() {
+    firstSet.style.display = "none";
+    secondSet.style.display = "none";
+    thirdSet.style.display = "none";
+    htmlDetails.classList.remove("none");
+    htmlDetails.classList.add("show");
+}
+
+function openCssDetails() {
+    firstSet.style.display = "none";
+    secondSet.style.display = "none";
+    thirdSet.style.display = "none";
+    cssDetails.classList.remove("none");
+    cssDetails.classList.add("show");
+}
+
+function openJsDetails() {
+    firstSet.style.display = "none";
+    secondSet.style.display = "none";
+    thirdSet.style.display = "none";
+    jsDetails.classList.remove("none");
+    jsDetails.classList.add("show");
+}
+
+function openReactDetails() {
+    firstSet.style.display = "none";
+    secondSet.style.display = "none";
+    thirdSet.style.display = "none";
+    reactDetails.classList.remove("none");
+    reactDetails.classList.add("show");
+}
+
+function openCppDetails() {
+    firstSet.style.display = "none";
+    secondSet.style.display = "none";
+    thirdSet.style.display = "none";
+    cppDetails.classList.remove("none");
+    cppDetails.classList.add("show");
+}
+
+function openPythonDetails() {
+    firstSet.style.display = "none";
+    secondSet.style.display = "none";
+    thirdSet.style.display = "none";
+    pythonDetails.classList.remove("none");
+    pythonDetails.classList.add("show");
+}
+
+function closeHtmlDetails() {
+    htmlDetails.classList.add("none");
+    firstSet.style.display = "flex";
+    secondSet.style.display = "flex";
+    thirdSet.style.display = "flex";
+}
+
+function closeCssDetails() {
+    cssDetails.classList.add("none");
+    firstSet.style.display = "flex";
+    secondSet.style.display = "flex";
+    thirdSet.style.display = "flex";
+}
+
+function closeJsDetails() {
+    jsDetails.classList.add("none");
+    firstSet.style.display = "flex";
+    secondSet.style.display = "flex";
+    thirdSet.style.display = "flex";
+}
+
+function closeReactDetails() {
+    reactDetails.classList.add("none");
+    firstSet.style.display = "flex";
+    secondSet.style.display = "flex";
+    thirdSet.style.display = "flex";
+}
+
+function closeCppDetails() {
+    cppDetails.classList.add("none");
+    firstSet.style.display = "flex";
+    secondSet.style.display = "flex";
+    thirdSet.style.display = "flex";
+}
+
+function closePythonDetails() {
+    pythonDetails.classList.add("none");
+    firstSet.style.display = "flex";
+    secondSet.style.display = "flex";
+    thirdSet.style.display = "flex";
+}
+
 form.addEventListener('submit', function(e) {
     e.preventDefault();
     const formData = new FormData(form);
@@ -96,3 +205,39 @@ form.addEventListener('submit', function(e) {
         }, 3000);
     });
 });
+
+// Mobile version
+
+const body = document.getElementById("body");
+const menu = document.getElementById("menu");
+const header = document.getElementById("header");
+const menuBtn = document.getElementById("menu-btn");
+const closeBtn = document.getElementById("close-btn");
+const btn = document.getElementById("btn");
+const mobileLinks = document.querySelectorAll(".head-mobile-links");
+
+function openMenu() {
+    menuBtn.style.display = "none";
+    closeBtn.style.display = "block";
+    header.style.width = "100vw";
+    header.style.height = "100%";
+    header.style.flexDirection = "column";
+    menu.style.display = "flex";
+    body.style.overflowY = "hidden";
+}
+
+function closeMenu() {
+    closeBtn.style.display = "none";
+    menuBtn.style.display = "block";
+    header.style.width = "100%";
+    header.style.height = "70px";
+    header.style.flexDirection = "row";
+    menu.style.display = "none";
+    body.style.overflowY = "auto";
+}
+
+mobileLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+        closeMenu();
+    });
+})

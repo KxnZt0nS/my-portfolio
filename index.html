@@ -10,11 +10,11 @@
         <link rel="stylesheet" href="styles.css">
     </head>
 
-    <body>
+    <body id="body">
         <header class="head" id="head">
-            <nav class="header row">
+            <nav class="header row" id="header">
                 <div class="head-title-container">
-                    <h1 id="title-name"><a href="#home" class="title-link">KxnZs</a></h1>
+                    <h1 id="title-name"><a href="#home" class="title-link head-mobile-links">KxnZs</a></h1>
                 </div>
 
                 <ul class="head-menu row">
@@ -24,6 +24,19 @@
                     <li><a href="#certifications" class="head-links">Certifications</a></li>
                     <li><a href="#contact" class="head-links">Contact</a></li>
                 </ul>
+
+                <ul class="head-mobile-menu column" id="menu">
+                    <li><a href="#about" class="head-mobile-links">About</a></li>
+                    <li><a href="#skills" class="head-mobile-links">Skills</a></li>
+                    <li><a href="#projects" class="head-mobile-links">Projects</a></li>
+                    <li><a href="#certifications" class="head-mobile-links">Certifications</a></li>
+                    <li><a href="#contact" class="head-mobile-links">Contact</a></li>
+                </ul>
+
+                <div class="head-mobile-icon" id="btn">
+                    <i class="fa-solid fa-bars" id="menu-btn" onclick="openMenu()"></i>
+                    <i class="fa-solid fa-xmark" id="close-btn" onclick="closeMenu()"></i>
+                </div>
             </nav>
         </header>
 
@@ -32,7 +45,7 @@
                 <div class="home-container row">
                     <div class="home-photo-container row">
                         <div class="photo-container row">
-                            <h1>Not Yet</h1>
+                            <img src="photo.jpg" alt="My portfolio image">
                         </div>
                     </div>
                     
@@ -58,7 +71,7 @@
                             </div>
 
                             <div class="faq-answers" id="a-1">
-                                <p>I'm a self-taught 18-year-old high school student. I live in Italy and I'm Nigerian. By the time I get my diploma, my set of skills will be much higher.</p>
+                                <p>I'm a self-taught 19-year-old high school student. I live in Italy and I'm Nigerian. By the time I get my diploma, my set of skills will be much higher.</p>
                             </div>
                         </div>
 
@@ -121,69 +134,252 @@
                                 <p>I'm currently searching for my first-ever part-time job. If you want, you give me some <a href="#contact">feedback</a>, I would appreciate it. And if you want to contact me, click <a href="#contact">here</a>.</p>
                             </div>
                         </div>
+
+                        <div class="faq-items">
+                            <div class="faq-questions row" id="q-6">
+                                <p>How can you find me?</p>
+
+                                <div class="faq-icons row">
+                                    <i class="fa-solid fa-plus"></i>
+                                    <i class="fa-solid fa-minus"></i>
+                                </div>
+                            </div>
+
+                            <div class="faq-answers" id="a-6">
+                                <p>
+                                    You can find me on social media platforms such as my 
+                                    <a href="https://www.youtube.com/channel/UCXkgA20CNXg4xoaWkp97bZQ" target="_blank">Youtube Channel</a>, 
+                                    <a href="https://www.tiktok.com/@kxnzt0ns" target="_blank">Tiktok</a>, <a href="https://www.instagram.com/kxnzt0ns/" target="_blank">Instagram</a>,
+                                    <a href="https://x.com/KxnZt0nS" target="_blank">Twitter</a> and <a href="https://discord.com/users/1382610355171102880" target="_blank">Discord</a> accounts. 
+                                    I post content related to web development and programming in general.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
 
             <section class="skills-page row" id="skills">
                 <div class="skills-container row">
-                    <div class="skill-container column"  id="html-skill" title="HTML Level">
-                        <div class="icon-container row">
-                            <i class="fa-brands fa-html5 fa-languages"></i>
+                    <div class="first-skills-set skills-set column" id="first-set">
+                        <div class="skill-container column" id="html-skill" title="Click for more info" onclick="openHtmlDetails()">
+                            <div class="icon-container row">
+                                <i class="fa-brands fa-html5 fa-languages"></i>
+                                <p>(HyperText Markup Language)</p>
+                            </div>
+
+                            <div class="level-container column">
+                                <div class="level-box">
+                                    <div class="level-length" id="html-length"></div>
+                                </div>
+                            </div>
                         </div>
 
-                        <div class="level-container column">
-                            <p>10/10</p>
-                        </div>
-                    </div>
+                        <div class="skill-container column" id="css-skill" title="Click for more info" onclick="openCssDetails()">
+                            <div class="icon-container row">
+                                <i class="fa-brands fa-css3-alt fa-languages"></i>
+                                <p>(Cascading Style Sheets)</p>
+                            </div>
 
-                    <div class="skill-container column" id="css-skill" title="CSS Level">
-                        <div class="icon-container row">
-                            <i class="fa-brands fa-css3-alt fa-languages"></i>
-                        </div>
-
-                        <div class="level-container column">
-                            <p>8/10</p>
-                        </div>
-                    </div>
-
-                    <div class="skill-container column" id="js-skill" title="JavaScript Level">
-                        <div class="icon-container row">
-                            <i class="fa-brands fa-js fa-languages"></i>
-                        </div>
-
-                        <div class="level-container column">
-                            <p>6/10</p>
+                            <div class="level-container column">
+                                <div class="level-box">
+                                    <div class="level-length" id="css-length"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="skill-container column" id="react-skill" title="React Level">
-                        <div class="icon-container row">
-                            <i class="fa-brands fa-react fa-languages"></i>
+                    <div class="second-skills-set skills-set column" id="second-set">
+                        <div class="skill-container column" id="js-skill" title="Click for more info" onclick="openJsDetails()">
+                            <div class="icon-container row">
+                                <i class="fa-brands fa-js fa-languages"></i>
+                                <p>(JavaScript)</p>
+                            </div>
+
+                            <div class="level-container column">
+                                <div class="level-box">
+                                    <div class="level-length" id="js-length"></div>
+                                </div>
+                            </div>
                         </div>
 
-                        <div class="level-container column">
-                            <p>2/10</p>
+                        <div class="skill-container column" id="react-skill" title="Click for more info" onclick="openReactDetails()">
+                            <div class="icon-container row">
+                                <i class="fa-brands fa-react fa-languages"></i>
+                                <p>(React)</p>
+                            </div>
+
+                            <div class="level-container column">
+                                <div class="level-box">
+                                    <div class="level-length" id="react-length"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     
-                    <div class="skill-container column" id="cpp-skill" title="C++ Level">
-                        <div class="icon-container row">
-                            <i class="bx bxl-c-plus-plus fa-languages"></i>
+                    <div class="third-skills-set skills-set column" id="third-set" >
+                        <div class="skill-container column" id="cpp-skill" title="Click for more info" onclick="openCppDetails()">
+                            <div class="icon-container row">
+                                <i class="bx bxl-c-plus-plus fa-languages"></i>
+                                <p>(C++)</p>
+                            </div>
+
+                            <div class="level-container column">
+                                <div class="level-box">
+                                    <div class="level-length" id="cpp-length"></div>
+                                </div>
+                            </div>
                         </div>
 
-                        <div class="level-container column">
-                            <p>7/10</p>
+                        <div class="skill-container column" id="python-skill" title="Click for more info" onclick="openPythonDetails()">
+                            <div class="icon-container row">
+                                <i class="fa-brands fa-python fa-languages"></i>
+                                <p>(Python)</p>
+                            </div>
+
+                            <div class="level-container column">
+                                <div class="level-box">
+                                    <div class="level-length" id="python-length"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="skill-container column" id="python-skill" title="Python Level">
-                        <div class="icon-container row">
-                            <i class="fa-brands fa-python fa-languages"></i>
+                    <div class="html-skill-details skill-details column none" id="html-details">
+                        <div class="skill-icon-level-container column">
+                            <div class="name-container row">
+                                <i class="fa-brands fa-html5 fa-languages"></i>
+                                <p>(HyperText Markup Language)</p>
+                            </div>
+
+                            <div class="level-container column">
+                                <div class="level-box skill-box">
+                                    <div class="level-length" id="html-length"></div>
+                                </div>
+                            </div>
                         </div>
 
-                        <div class="level-container column">
-                            <p>5/10</p>
+                        <div class="skill-details-content-container row">
+                            <p>I can build full page structures with HTML and I’m comfortable using semantic tags to keep everything clean and organized. I don’t really struggle with structuring pages anymore.</p>
+                        </div>
+                        
+                        <div class="close-details-container" onclick="closeHtmlDetails()">
+                            <i class="fa-regular fa-circle-xmark"></i>
+                        </div>
+                    </div>
+
+                    <div class="css-skill-details skill-details column none" id="css-details">
+                        <div class="skill-icon-level-container column">
+                            <div class="name-container row">
+                                <i class="fa-brands fa-css3-alt fa-languages"></i>
+                                <p>(Cascading Style Sheets)</p>
+                            </div>
+
+                            <div class="level-container column">
+                                <div class="level-box skill-box">
+                                    <div class="level-length" id="css-length"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skill-details-content-container row">
+                            <p>I can build responsive layouts using CSS and Flexbox without much issue. I understand most of the core stuff and I’m still improving with animations, media queries, and more advanced styling.</p>
+                        </div>
+
+                        <div class="close-details-container" onclick="closeCssDetails()">
+                            <i class="fa-regular fa-circle-xmark"></i>
+                        </div>
+                    </div>
+
+                    <div class="js-skill-details skill-details column none" id="js-details">
+                        <div class="skill-icon-level-container column">
+                            <div class="name-container row">
+                                <i class="fa-brands fa-js fa-languages"></i>
+                                <p>(JavaScript)</p>
+                            </div>
+
+                            <div class="level-container column">
+                                <div class="level-box skill-box">
+                                    <div class="level-length" id="js-length"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skill-details-content-container row">
+                            <p>I can build interactive features using DOM manipulation and events. I understand the basics well, but I’m still working on getting faster and cleaner with logic and built-in array/string methods.</p>
+                        </div>
+
+                        <div class="close-details-container" onclick="closeJsDetails()">
+                            <i class="fa-regular fa-circle-xmark"></i>
+                        </div>
+                    </div>
+
+                    <div class="react-skill-details skill-details column none" id="react-details">
+                        <div class="skill-icon-level-container column">
+                            <div class="name-container row">
+                                <i class="fa-brands fa-react fa-languages"></i>
+                                <p>(React)</p>
+                            </div>
+
+                            <div class="level-container column">
+                                <div class="level-box skill-box">
+                                    <div class="level-length" id="react-length"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skill-details-content-container row">
+                            <p>I haven’t started React yet. I’m currently focused on getting stronger with JavaScript first, and I’ll move into React after that.</p>
+                        </div>
+
+                        <div class="close-details-container" onclick="closeReactDetails()">
+                            <i class="fa-regular fa-circle-xmark"></i>
+                        </div>
+                    </div>
+
+                    <div class="cpp-skill-details skill-details column none" id="cpp-details">
+                        <div class="skill-icon-level-container column">
+                            <div class="name-container row">
+                                <i class="bx bxl-c-plus-plus fa-languages"></i>
+                                <p>(C++)</p>
+                            </div>
+
+                            <div class="level-container column">
+                                <div class="level-box skill-box">
+                                    <div class="level-length" id="cpp-length"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skill-details-content-container row">
+                            <p>I’m comfortable with the fundamentals and object-oriented programming. I mainly use it for logic, problem solving, and practicing programming concepts.</p>
+                        </div>
+
+                        <div class="close-details-container" onclick="closeCppDetails()">
+                            <i class="fa-regular fa-circle-xmark"></i>
+                        </div>
+                    </div>
+
+                    <div class="python-skill-details skill-details column none" id="python-details">
+                        <div class="skill-icon-level-container column">
+                            <div class="name-container row">
+                                <i class="fa-brands fa-python fa-languages"></i>
+                                <p>(Python)</p>
+                            </div>
+
+                            <div class="level-container column">
+                                <div class="level-box skill-box">
+                                    <div class="level-length" id="python-length"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skill-details-content-container row">
+                            <p>I can write basic scripts and small projects in Python. I understand the core syntax and logic, but I’m still improving when it comes to more complex programs.</p>
+                        </div>
+
+                        <div class="close-details-container" onclick="closePythonDetails()">
+                            <i class="fa-regular fa-circle-xmark"></i>
                         </div>
                     </div>
                 </div>
@@ -192,26 +388,32 @@
             <section class="projects-page row" id="projects">
                 <div class="projects-container row">
                     <div class="project-container column">
-                        <div class="project-image-container"></div>
+                        <div class="project-image-container">
+                            <a href="https://kxnzt0ns.github.io/fullstack-roadmap" class="project-links"><img src="Fullstack_Roadmap.png" alt="Fullstack Roadmap"></a>
+                        </div>
 
-                        <div class="project-description-container">
-                            <p>Project 1</p>
+                        <div class="project-description-container column">
+                            <p>Full-Stack Roadmap Basic and Advanced</p>
                         </div>
                     </div>
 
                     <div class="project-container column">
-                        <div class="project-image-container"></div>
+                        <div class="project-image-container">
+                            <a href="https://kxnzt0ns.github.io/fullstack-quiz" class="project-links"><img src="Fullstack_Quiz.png" alt="Fullstack Quiz"></a>
+                        </div>
 
-                        <div class="project-description-container">
-                            <p>Project 2</p>
+                        <div class="project-description-container column">
+                            <p>Full-Stack Quiz</p>
                         </div>
                     </div>
 
                     <div class="project-container column">
-                        <div class="project-image-container"></div>
+                        <div class="project-image-container row" id="more-projects">
+                            <a href="projects.html" id="link-projects" class="row"><i class="fa-solid fa-plus" id="projects-icon"></i></a>
+                        </div>
 
-                        <div class="project-description-container">
-                            <p>Project 3</p>
+                        <div class="project-description-container column">
+                            <p>More Projects</p>
                         </div>
                     </div>
                 </div>
@@ -219,7 +421,9 @@
 
             <section class="certifications-page row" id="certifications">
                 <div class="certifications-container row">
-                    <div class="certification-container"></div>
+                    <div class="certification-container">
+                        <img src="Legacy Responsive Web Design V8 Certification.png" alt="Legacy Responsive Web Design V8 Certification">
+                    </div>
                 </div>
             </section>
 
@@ -249,9 +453,11 @@
                         </form>
                     </div>
 
-                    <div class="other-container">
+                    <div class="other-container column">
                         <div class="other-3d-container row">
-                            <div class="img-container"></div>
+                            <div class="img-container">
+                                <img src="usb.jpg" alt="My usb profile picture" title="My global profile picture">
+                            </div>
                         </div>
                         
                         <div class="other-feedback-container row">
@@ -269,13 +475,13 @@
         <footer class="foot" id="footer">
             <div class="footer row">
                 <div class="foot-icons-container row">
-                    <a href="https://www.youtube.com/channel/UCXkgA20CNXg4xoaWkp97bZQ" class="social-links"><i class="fa-brands fa-youtube"></i></a>
-                    <a href="https://github.com/KxnZt0nS" class="social-links"><i class="fa-brands fa-github"></i></a>
-                    <a href="https://discord.com/users/1382610355171102880" class="social-links"><i class="fa-brands fa-discord"></i></a>
+                    <a href="https://www.linkedin.com/in/success-iduwe-35b685379/" class="social-links" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/KxnZt0nS" class="social-links" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.freecodecamp.org/kxnzt0ns" class="social-links" target="_blank"><i class="fa-brands fa-free-code-camp"></i></a>
                 </div>
 
                 <div class="foot-copy-container">
-                    <p>&copy; 2025 KxnZs. All Right Reserved.</p>
+                    <p>&copy; 2026 KxnZs. All Right Reserved.</p>
                 </div>
             </div>
         </footer>
