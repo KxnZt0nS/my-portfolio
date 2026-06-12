@@ -21,8 +21,6 @@ html {
 }
 
 body {
-    overflow-x: hidden;
-    overflow-y: hidden;
     color: var(--text-color);
     background-color: var(--first-bgcolor);
     font-size: 1em;
